@@ -12,25 +12,25 @@ $(function ()
             event.preventDefault();
             
             // get values from FORM
-            var ndocumento = $("input#ndocumento").val();
-            var nombre = $("input#nombre").val();
-            var paterno = $("input#paterno").val();
-            var materno = $("input#materno").val();
-            var nacimiento = $("input#nacimiento").val();
-            var telefono = $("input#telefono").val();
-            var email = $("input#email").val();
+            var NUM_DOC_IDENTIDAD = $("input#ndocumento").val();
+            var NOMBRES = $("input#nombre").val();
+            var APE_PATERNO = $("input#paterno").val();
+            var APE_MATERNO = $("input#materno").val();
+            var FECHA_NACIMIENTO = $("input#nacimiento").val();
+            var NUM_TELEFONO_1 = $("input#telefono").val();
+            var CORREO_1 = $("input#email").val();
             
             $.ajax({
                 url: "mail/contact_me.php",
                 type: "POST",
                 data: {
-                    ndocumento: ndocumento,
-                    nombre: nombre,
-                    paterno: paterno,
-                    materno: materno,
-                    nacimiento: nacimiento,
-                    telefono: telefono,
-                    email: email
+                    NUM_DOC_IDENTIDAD: NUM_DOC_IDENTIDAD,
+                    NOMBRES: NOMBRES,
+                    APE_PATERNO: APE_PATERNO,
+                    APE_MATERNO: APE_MATERNO,
+                    FECHA_NACIMIENTO: FECHA_NACIMIENTO,
+                    NUM_TELEFONO_1: NUM_TELEFONO_1,
+                    CORREO_1: CORREO_1
                 },
                 cache: false,
                 success: function() {

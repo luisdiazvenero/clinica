@@ -5,41 +5,41 @@
 // Check for empty fields
 
 
-if(empty($_POST['ndocumento'])       ||
-   empty($_POST['nombre'])  		||
-   empty($_POST['paterno'])       ||
-   empty($_POST['materno'])       ||
-   empty($_POST['nacimiento'])       ||
-   empty($_POST['telefono'])       ||
-   empty($_POST['email']) 		||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+if(empty($_POST['NUM_DOC_IDENTIDAD'])       ||
+   empty($_POST['NOMBRES'])  		||
+   empty($_POST['APE_PATERNO'])       ||
+   empty($_POST['APE_MATERNO'])       ||
+   empty($_POST['FECHA_NACIMIENTO'])       ||
+   empty($_POST['NUM_TELEFONO_1'])       ||
+   empty($_POST['CORREO_1']) 		||
+   !filter_var($_POST['CORREO_1'],FILTER_VALIDATE_EMAIL))
    {
 	echo "No arguments Provided!";
 	return false;
    }
 
-$ndocumento = $_POST['ndocumento'];
-$nombre = $_POST['nombre'];
-$paterno = $_POST['paterno'];
-$materno = $_POST['materno'];
-$nacimiento = $_POST['nacimiento'];
-$telefono = $_POST['telefono'];
-$email_address = $_POST['email'];
+$NUM_DOC_IDENTIDAD = $_POST['NUM_DOC_IDENTIDAD'];
+$NOMBRES = $_POST['NOMBRES'];
+$APE_PATERNO = $_POST['APE_PATERNO'];
+$APE_MATERNO = $_POST['APE_MATERNO'];
+$FECHA_NACIMIENTO = $_POST['FECHA_NACIMIENTO'];
+$NUM_TELEFONO_1 = $_POST['NUM_TELEFONO_1'];
+$CORREO_1 = $_POST['CORREO_1'];
 
 	
 
 // Create the email and send the message
 $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
-$subject = "Lead Clinica Internacional:".  $nombre;
+$subject = "Lead Clinica Internacional:";
 $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional.\n\n"."Aquí los detalles:
-   \nNombre:". $nombre .
-   "\nApellido Paterno:". $paterno .
-   "\nApellido Materno:". $materno .
-   "\nNumero de documento:". $ndocumento .
-   "\nFecha de Nacimiento:". $nacimiento .
-   "\nTelefono:". $telefono .
-   "\nEmail:". $email_address;
+   \nNOMBRES: ". $NOMBRES .
+   "\nAPE_PATERNO: ". $APE_PATERNO .
+   "\nAPE_MATERNO: ". $APE_MATERNO .
+   "\nNUM_DOC_IDENTIDAD: ". $NUM_DOC_IDENTIDAD .
+   "\nFECHA_NACIMIENTO: ". $FECHA_NACIMIENTO .
+   "\nNUM_TELEFONO_1: ". $NUM_TELEFONO_1 .
+   "\nCORREO_1: ". $CORREO_1;
 
 $headers = "From:" . $from;	
 mail($to,$subject,$message,$headers);
