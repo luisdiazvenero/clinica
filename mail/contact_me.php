@@ -6,6 +6,7 @@
 
 
 if(empty($_POST['NUM_DOC_IDENTIDAD'])       ||
+   empty($_POST['TIP_DOC_IDENTIDAD'])       ||
    empty($_POST['NOMBRES'])  		||
    empty($_POST['APE_PATERNO'])       ||
    empty($_POST['APE_MATERNO'])       ||
@@ -20,6 +21,7 @@ if(empty($_POST['NUM_DOC_IDENTIDAD'])       ||
 
 $COD_EMPRESA = $_POST['COD_EMPRESA'];
 $NUM_DOC_IDENTIDAD = $_POST['NUM_DOC_IDENTIDAD'];
+$TIP_DOC_IDENTIDAD = $_POST['TIP_DOC_IDENTIDAD'];
 $NOMBRES = $_POST['NOMBRES'];
 $APE_PATERNO = $_POST['APE_PATERNO'];
 $APE_MATERNO = $_POST['APE_MATERNO'];
@@ -33,7 +35,7 @@ $CORREO_1 = $_POST['CORREO_1'];
 $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
 $subject = "Lead Clinica Internacional:";
-$message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional.\n\n"."Aquí los detalles:
+$message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional. Aquí los detalles:
    \nNOMBRES: ". $NOMBRES .
    "\nAPE_PATERNO: ". $APE_PATERNO .
    "\nAPE_MATERNO: ". $APE_MATERNO .
