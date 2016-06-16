@@ -1,4 +1,7 @@
 <?php
+   ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+
 // Check for empty fields
 if(empty($_POST['ndocumento'])       ||
    empty($_POST['nombre'])  		||
@@ -13,16 +16,15 @@ if(empty($_POST['ndocumento'])       ||
 	return false;
    }
 
-$ndocumento = 'ndocumento';	
-$nombre = 'nombre';
-$apaterno = 'apaterno';
-$amaterno = 'amaterno';
-$nacimiento = 'nacimiento';
-$telefono = 'telefono';
-$email_address = 'email';
+$ndocumento = $_POST['ndocumento'];
+$nombre = $_POST['nombre'];
+$apaterno = $_POST['apaterno'];
+$amaterno = $_POST['amaterno'];
+$nacimiento = $_POST['nacimiento'];
+$telefono = $_POST['telefono'];
+$email_address = $_POST['email'];
 	
-   ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
+
 // Create the email and send the message
 $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
@@ -31,6 +33,7 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
    \n\nNombre:". $nombre .
    "\n\nApellido Paterno:". $apaterno .
    "\n\nApellido Materno:". $amaterno .
+   "\n\nNumero de documento:". $ndocumento .
    "\n\nFecha de Nacimiento:". $nacimiento .
    "\n\nTelefono:". $telefono .
    "\n\nEmail:". $email_address;
