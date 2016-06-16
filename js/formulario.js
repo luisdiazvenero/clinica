@@ -12,6 +12,7 @@ $(function ()
             event.preventDefault();
             
             // get values from FORM
+            var COD_EMPRESA = "1";
             var NUM_DOC_IDENTIDAD = $("input#ndocumento").val();
             var NOMBRES = $("input#nombre").val();
             var APE_PATERNO = $("input#paterno").val();
@@ -24,6 +25,7 @@ $(function ()
                 url: "mail/contact_me.php",
                 type: "POST",
                 data: {
+                    COD_EMPRESA: COD_EMPRESA,
                     NUM_DOC_IDENTIDAD: NUM_DOC_IDENTIDAD,
                     NOMBRES: NOMBRES,
                     APE_PATERNO: APE_PATERNO,

@@ -18,6 +18,7 @@ if(empty($_POST['NUM_DOC_IDENTIDAD'])       ||
 	return false;
    }
 
+$COD_EMPRESA = $_POST['COD_EMPRESA'];
 $NUM_DOC_IDENTIDAD = $_POST['NUM_DOC_IDENTIDAD'];
 $NOMBRES = $_POST['NOMBRES'];
 $APE_PATERNO = $_POST['APE_PATERNO'];
@@ -36,6 +37,7 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
    \nNOMBRES: ". $NOMBRES .
    "\nAPE_PATERNO: ". $APE_PATERNO .
    "\nAPE_MATERNO: ". $APE_MATERNO .
+   "\nCOD_EMPRESA: ". $COD_EMPRESA .
    "\nNUM_DOC_IDENTIDAD: ". $NUM_DOC_IDENTIDAD .
    "\nFECHA_NACIMIENTO: ". $FECHA_NACIMIENTO .
    "\nNUM_TELEFONO_1: ". $NUM_TELEFONO_1 .
