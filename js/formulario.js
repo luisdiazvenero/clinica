@@ -13,7 +13,7 @@ $(function ()
             
             // get values from FORM
             var COD_EMPRESA = "1";
-            var TIP_DOC_IDENTIDAD = $("input[tipodocumento]:checked").val();
+            var TIP_DOC_IDENTIDAD = $("input[name=tipodocumento]:checked").val();
             var NUM_DOC_IDENTIDAD = $("input#ndocumento").val();
             var NOMBRES = $("input#nombre").val();
             var APE_PATERNO = $("input#paterno").val();
