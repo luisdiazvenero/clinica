@@ -3,6 +3,8 @@
     error_reporting( E_ALL );
 
 // Check for empty fields
+
+/*  
 if(empty($_POST['ndocumento'])       ||
    empty($_POST['nombre'])  		||
    empty($_POST['apaterno'])       ||
@@ -23,6 +25,7 @@ $amaterno = $_POST['amaterno'];
 $nacimiento = $_POST['nacimiento'];
 $telefono = $_POST['telefono'];
 $email_address = $_POST['email'];
+*/
 	
 
 // Create the email and send the message
