@@ -14,8 +14,8 @@ $(function ()
             // get values from FORM
             var ndocumento = $("input#ndocumento").val();
             var nombre = $("input#nombre").val();
-            var apaterno = $("input#apaterno").val();
-            var amaterno = $("input#amaterno").val();
+            var paterno = $("input#paterno").val();
+            var materno = $("input#materno").val();
             var nacimiento = $("input#nacimiento").val();
             var telefono = $("input#telefono").val();
             var email = $("input#email").val();
@@ -26,8 +26,8 @@ $(function ()
                 data: {
                     ndocumento: ndocumento,
                     nombre: nombre,
-                    apaterno: apaterno,
-                    amaterno: amaterno,
+                    paterno: paterno,
+                    materno: materno,
                     nacimiento: nacimiento,
                     telefono: telefono,
                     email: email

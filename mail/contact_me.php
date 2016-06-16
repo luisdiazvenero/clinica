@@ -7,8 +7,8 @@
 
 if(empty($_POST['ndocumento'])       ||
    empty($_POST['nombre'])  		||
-   empty($_POST['apaterno'])       ||
-   empty($_POST['amaterno'])       ||
+   empty($_POST['paterno'])       ||
+   empty($_POST['materno'])       ||
    empty($_POST['nacimiento'])       ||
    empty($_POST['telefono'])       ||
    empty($_POST['email']) 		||
@@ -20,8 +20,8 @@ if(empty($_POST['ndocumento'])       ||
 
 $ndocumento = $_POST['ndocumento'];
 $nombre = $_POST['nombre'];
-$apaterno = $_POST['apaterno'];
-$amaterno = $_POST['amaterno'];
+$paterno = $_POST['paterno'];
+$materno = $_POST['materno'];
 $nacimiento = $_POST['nacimiento'];
 $telefono = $_POST['telefono'];
 $email_address = $_POST['email'];
@@ -34,8 +34,8 @@ $to = "luis@coronelsmith.com";
 $subject = "Lead Clinica Internacional:".  $nombre;
 $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional.\n\n"."Aquí los detalles:
    \nNombre:". $nombre .
-   "\nApellido Paterno:". $apaterno .
-   "\nApellido Materno:". $amaterno .
+   "\nApellido Paterno:". $paterno .
+   "\nApellido Materno:". $materno .
    "\nNumero de documento:". $ndocumento .
    "\nFecha de Nacimiento:". $nacimiento .
    "\nTelefono:". $telefono .
@@ -43,6 +43,5 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
 
 $headers = "From:" . $from;	
 mail($to,$subject,$message,$headers);
-echo "Test email sent";
 return true;			
 ?>
