@@ -13,13 +13,13 @@ if(empty($_POST['ndocumento'])       ||
 	return false;
    }
 
-$ndocumento = $_POST['ndocumento'];	
-$nombre = $_POST['nombre'];
-$apaterno = $_POST['apaterno'];
-$amaterno = $_POST['amaterno'];
-$nacimiento = $_POST['nacimiento'];
-$telefono = $_POST['telefono'];
-$email_address = $_POST['email'];
+$ndocumento = 'ndocumento';	
+$nombre = 'nombre';
+$apaterno = 'apaterno';
+$amaterno = 'amaterno';
+$nacimiento = 'nacimiento';
+$telefono = 'telefono';
+$email_address = 'email';
 	
 // Create the email and send the message
 $from = "noreply@capitanmurdock.com";
