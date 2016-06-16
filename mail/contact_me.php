@@ -1,25 +1,35 @@
 <?php
 // Check for empty fields
-if(empty($_POST['name'])  		||
+if(empty($_POST['nombre'])  		||
+   empty($_POST['apaterno'])       ||
+   empty($_POST['amaterno'])       ||
+   empty($_POST['nacimiento'])       ||
+   empty($_POST['telefono'])       ||
    empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['message'])	||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
 	echo "No arguments Provided!";
 	return false;
    }
 	
-$name = $_POST['name'];
+$nombre = $_POST['nombre'];
+$apaterno = $_POST['apaterno'];
+$amaterno = $_POST['amaterno'];
+$nacimiento = $_POST['nacimiento'];
+$telefono = $_POST['telefono'];
 $email_address = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
 	
 // Create the email and send the message
-$to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$to = 'luis@coronelsmith.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$email_subject = "Lead Clinica Internacional:  $nombre";
+$email_body = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional.\n\n"."Aquí los detalles:
+   \n\nNombre: $nombre
+   \n\nApellido Paterno: $apaterno
+   \n\nApellido Materno: $amaterno
+   \n\nFecha de Nacimiento: $nacimiento
+   \n\nTelefono: $telefono
+   \n\nEmail: $email_address;
+$headers = "From: noreply@capitanmurduck.com";
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
