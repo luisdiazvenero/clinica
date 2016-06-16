@@ -26,14 +26,14 @@ $email_address = 'email';
 // Create the email and send the message
 $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
-$subject = "Lead Clinica Internacional:  $nombre";
+$subject = "Lead Clinica Internacional:".  $nombre;
 $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional.\n\n"."Aquí los detalles:
-   \n\nNombre: $nombre
-   \n\nApellido Paterno: $apaterno
-   \n\nApellido Materno: $amaterno
-   \n\nFecha de Nacimiento: $nacimiento
-   \n\nTelefono: $telefono
-   \n\nEmail: $email_address";
+   \n\nNombre:". $nombre
+   "\n\nApellido Paterno:". $apaterno
+   "\n\nApellido Materno:". $amaterno
+   "\n\nFecha de Nacimiento:". $nacimiento
+   "\n\nTelefono:". $telefono
+   "\n\nEmail:". $email_address;
 
 $headers = "From:" . $from;	
 mail($to,$subject,$message,$headers);
