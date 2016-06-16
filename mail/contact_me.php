@@ -28,8 +28,8 @@ $email_body = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internac
    \n\nApellido Materno: $amaterno
    \n\nFecha de Nacimiento: $nacimiento
    \n\nTelefono: $telefono
-   \n\nEmail: $email_address;
-$headers = "From: noreply@capitanmurduck.com";
+   \n\nEmail: $email_address";
+$headers = "From: noreply@capitanmurdock.com";
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
