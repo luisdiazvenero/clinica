@@ -21,7 +21,7 @@ $(function ()
             var email = $("input#email").val();
             
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "../../mail/contact_me.php",
                 type: "POST",
                 data: {
                     ndocumento: ndocumento,
