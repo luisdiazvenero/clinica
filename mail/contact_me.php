@@ -4,7 +4,7 @@
 
 // Check for empty fields
 
-/*  
+
 if(empty($_POST['ndocumento'])       ||
    empty($_POST['nombre'])  		||
    empty($_POST['apaterno'])       ||
@@ -25,7 +25,7 @@ $amaterno = $_POST['amaterno'];
 $nacimiento = $_POST['nacimiento'];
 $telefono = $_POST['telefono'];
 $email_address = $_POST['email'];
-*/
+
 	
 
 // Create the email and send the message
@@ -33,13 +33,13 @@ $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
 $subject = "Lead Clinica Internacional:".  $nombre;
 $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional.\n\n"."Aquí los detalles:
-   \n\nNombre:". $nombre .
-   "\n\nApellido Paterno:". $apaterno .
-   "\n\nApellido Materno:". $amaterno .
-   "\n\nNumero de documento:". $ndocumento .
-   "\n\nFecha de Nacimiento:". $nacimiento .
-   "\n\nTelefono:". $telefono .
-   "\n\nEmail:". $email_address;
+   \nNombre:". $nombre .
+   "\nApellido Paterno:". $apaterno .
+   "\nApellido Materno:". $amaterno .
+   "\nNumero de documento:". $ndocumento .
+   "\nFecha de Nacimiento:". $nacimiento .
+   "\nTelefono:". $telefono .
+   "\nEmail:". $email_address;
 
 $headers = "From:" . $from;	
 mail($to,$subject,$message,$headers);
