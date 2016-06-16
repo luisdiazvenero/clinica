@@ -21,6 +21,8 @@ $nacimiento = 'nacimiento';
 $telefono = 'telefono';
 $email_address = 'email';
 	
+   ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
 // Create the email and send the message
 $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
@@ -35,5 +37,6 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
 
 $headers = "From:" . $from;	
 mail($to,$subject,$message,$headers);
+echo "Test email sent";
 return true;			
 ?>
