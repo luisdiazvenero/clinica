@@ -33,7 +33,7 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
    \n\nTelefono: $telefono
    \n\nEmail: $email_address";
 
-$headers = "From:" $from;	
+$headers = "From:" . $from;	
 mail($to,$subject,$message,$headers);
 return true;			
 ?>
