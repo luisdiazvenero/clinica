@@ -1,3 +1,5 @@
+
+
 $(function () 
 	{ $("#form-leads input,#form-leads select,#form-leads textarea").not("[type=submit]").jqBootstrapValidation({
 
@@ -23,7 +25,7 @@ $(function ()
             var CORREO_1 = $("input#email").val();
             
             $.ajax({
-                url: "mail/contact_me.php",
+                url: "././mail/contact_me.php",
                 type: "POST",
                 data: {
                     COD_EMPRESA: COD_EMPRESA,
@@ -75,6 +77,17 @@ $(function ()
     });
 
 } );
+
+$.jqBootstrapValidation('override', {
+    builtInValidators: {
+        validemail: {
+            name: 'Validemail',
+            type: 'regex',
+            regex: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,6}',
+            message: 'Not a valid email address'
+        }
+    }
+});
 
 // When clicking on Full hide fail/success boxes
 $('#nombre').focus(function() {
