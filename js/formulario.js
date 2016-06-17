@@ -13,13 +13,13 @@ $(function ()
             
             // get values from FORM
             var COD_EMPRESA = "1";
-            var TIP_DOC_IDENTIDAD = $("input#tipodocumento").val();
+            var TIP_DOC_IDENTIDAD = $("select#tipodocumento").val();
             var NUM_DOC_IDENTIDAD = $("input#ndocumento").val();
             var NOMBRES = $("input#nombre").val();
             var APE_PATERNO = $("input#paterno").val();
             var APE_MATERNO = $("input#materno").val();
             var FECHA_NACIMIENTO = $("input#nacimiento").val();
-            var TIP_TELEFONO_1 = $("input#tipotelefono").val();
+            var TIP_TELEFONO_1 = $("select#tipotelefono").val();
             var NUM_TELEFONO_1 = $("input#telefono").val();
             var CORREO_1 = $("input#email").val();
             
