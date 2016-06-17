@@ -11,6 +11,7 @@ if(empty($_POST['NUM_DOC_IDENTIDAD'])       ||
    empty($_POST['APE_PATERNO'])       ||
    empty($_POST['APE_MATERNO'])       ||
    empty($_POST['FECHA_NACIMIENTO'])       ||
+   empty($_POST['TIP_TELEFONO_1'])       ||
    empty($_POST['NUM_TELEFONO_1'])       ||
    empty($_POST['CORREO_1']) 		||
    !filter_var($_POST['CORREO_1'],FILTER_VALIDATE_EMAIL))
@@ -26,6 +27,7 @@ $NOMBRES = $_POST['NOMBRES'];
 $APE_PATERNO = $_POST['APE_PATERNO'];
 $APE_MATERNO = $_POST['APE_MATERNO'];
 $FECHA_NACIMIENTO = $_POST['FECHA_NACIMIENTO'];
+$TIP_TELEFONO_1 = $_POST['TIP_TELEFONO_1'];
 $NUM_TELEFONO_1 = $_POST['NUM_TELEFONO_1'];
 $CORREO_1 = $_POST['CORREO_1'];
 
@@ -43,6 +45,7 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
    "\nNUM_DOC_IDENTIDAD: ". $NUM_DOC_IDENTIDAD .
    "\nTIP_DOC_IDENTIDAD: ". $TIP_DOC_IDENTIDAD .
    "\nFECHA_NACIMIENTO: ". $FECHA_NACIMIENTO .
+   "\nTIP_TELEFONO_1: ". $TIP_TELEFONO_1 .
    "\nNUM_TELEFONO_1: ". $NUM_TELEFONO_1 .
    "\nCORREO_1: ". $CORREO_1;
 
