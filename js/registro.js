@@ -21,6 +21,7 @@ $(function ()
             var APE_PATERNO = $("input#paterno").val();
             var APE_MATERNO = $("input#materno").val();
             var FECHA_NACIMIENTO = $("input#nacimiento").val();
+            var COD_SEXO = $("select#sexo").val();
             var TIP_TELEFONO_1 = $("select#tipotelefono").val();
             var NUM_TELEFONO_1 = $("input#telefono").val();
             var CORREO_1 = $("input#email").val();
@@ -36,6 +37,7 @@ $(function ()
                     APE_PATERNO: APE_PATERNO,
                     APE_MATERNO: APE_MATERNO,
                     FECHA_NACIMIENTO: FECHA_NACIMIENTO,
+                    COD_SEXO: COD_SEXO,
                     TIP_TELEFONO_1: TIP_TELEFONO_1,
                     NUM_TELEFONO_1: NUM_TELEFONO_1,
                     CORREO_1: CORREO_1
