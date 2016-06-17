@@ -13,6 +13,7 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
    "\nNUM_DOC_IDENTIDAD: ". $NUM_DOC_IDENTIDAD .
    "\nTIP_DOC_IDENTIDAD: ". $TIP_DOC_IDENTIDAD .
    "\nFECHA_NACIMIENTO: ". $FECHA_NACIMIENTO .
+   "\nTIP_TELEFONO_1: ". $TIP_TELEFONO_1 .
    "\nNUM_TELEFONO_1: ". $NUM_TELEFONO_1 .
    "\nCORREO_1: ". $CORREO_1;
 

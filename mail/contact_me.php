@@ -36,7 +36,7 @@ $CORREO_1 = $_POST['CORREO_1'];
 // Create the email and send the message
 $from = "noreply@capitanmurdock.com";
 $to = "luis@coronelsmith.com"; 
-$subject = "Lead Clinica Internacional:";
+$subject = "Lead Clinica Internacional";
 $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacional. Aquí los detalles:
    \nNOMBRES: ". $NOMBRES .
    "\nAPE_PATERNO: ". $APE_PATERNO .
