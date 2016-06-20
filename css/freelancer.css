@@ -454,3 +454,9 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+.control-group.warning > label, 
+.control-group.warning .help-block, 
+.control-group.warning .help-inline {
+    color: #ff0000;
+}
