@@ -67,7 +67,7 @@ $(function ()
                     COD_ESTADO_CIVIL: COD_ESTADO_CIVIL,
                     COD_SEXO: COD_SEXO,
                     DIRECCION: DIRECCION,
-                    COD_DEPARTAMENTO: COD_DEPARTAMENT,
+                    COD_DEPARTAMENTO: COD_DEPARTAMENTO,
                     COD_PROVINCIA: COD_PROVINCIA,
                     COD_DISTRITO: COD_DISTRITO,
                     TIP_TELEFONO_1: TIP_TELEFONO_1,
