@@ -3,10 +3,24 @@
 $(function () 
 	{ $("#form-leads input,#form-leads select,#form-leads textarea").not("[type=submit]").jqBootstrapValidation({
 
+
+
+        hiddenRecaptcha: {
+         required: function() {
+             if(grecaptcha.getResponse() == '') {
+                 return true;
+             } else {
+                 return false;
+             }
+         },
+
+         
 		preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
         },
+
+
 
         submitSuccess: function($form, event) {
             // Prevent spam click and default submit behaviour
@@ -134,6 +148,9 @@ $.jqBootstrapValidation('override', {
             message: 'Not a valid email address'
         }
     }
+
+
+}
 });
 
 // When clicking on Full hide fail/success boxes
