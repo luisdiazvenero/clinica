@@ -90,10 +90,10 @@
                 </div>
 
                 <!--Formulario-->
-                <div class="col-md-6">
+                <div class="col-md-4">
                 <form class="form-horizontal" name="landing-leads" id="form-leads">
                     <div class="form-group">
-                        <label for="tipodocumento" class="col-sm-4 control-label">Tipo de Documento</label>
+                        
                         <div class="col-sm-6">
                             <select class="form-control input-sm" id="tipodocumento" required>
                                 <option value="">Tipo Documento</option>
@@ -103,38 +103,47 @@
                               <option value="0004">Carnet Identidad</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="ndocumento" class="col-sm-4 control-label">Nº Documento</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control input-sm" id="ndocumento" placeholder="Ingrese su Nº DNI" required>
                         </div>
-                      </div>
+                    </div>
+
+                   
 
                       <div class="form-group">
-                        <label for="nombre" class="col-sm-4 control-label">Ingrese su nombre</label>
-                        <div class="col-sm-6">
+                        
+                        <div class="col-sm-12">
                             <input type="text" class="form-control input-sm" id="nombre" placeholder="Ingrese su nombre" required>
                         </div>
+
+
                       </div>
 
                       <div class="form-group">
-                        <label for="paterno" class="col-sm-4 control-label">Ingrese su apellido paterno</label>
-                        <div class="col-sm-6">
+                        
+                        <div class="col-sm-12">
                             <input type="text" class="form-control input-sm" id="paterno" placeholder="Ingrese su apellido paterno" required>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label for="materno" class="col-sm-4 control-label">Ingrese su apellido materno</label>
-                        <div class="col-sm-6">
+                        
+                        <div class="col-sm-12">
                             <input type="text" class="form-control input-sm" id="materno" placeholder="Ingrese su apellido materno" required>
                         </div>
                       </div>
 
                         <div class="form-group">
-                            <label for="nacimiento" class="col-sm-4 control-label">Ingrese su fecha de nacimiento</label>
+
+                            <div class="col-sm-6">
+                            <select class="form-control input-sm" id="sexo" required>
+                                <option value="">Sexo</option>
+                              <option value="0001">Masculino</option>
+                              <option value="0002">Femenino</option>
+                            </select>
+                            </div>
+                           
                             <div class="col-sm-6">
                             <div class="input-group date">
                               <input type="text" class="form-control input-sm" id="nacimiento" placeholder="Ingrese su fecha de nacimiento"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar" required></i></span>
@@ -142,19 +151,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                        <label for="sexo" class="col-sm-4 control-label">Sexo</label>
-                        <div class="col-sm-6">
-                            <select class="form-control input-sm" id="sexo" required>
-                                <option value="">Sexo</option>
-                              <option value="0001">Masculino</option>
-                              <option value="0002">Femenino</option>
-                            </select>
-                        </div>
-                        </div>
+                        
 
                         <div class="form-group">
-                        <label for="tipotelefono" class="col-sm-4 control-label">Tipo de Teléfono</label>
+                        
                         <div class="col-sm-6">
                             <select class="form-control input-sm" id="tipotelefono" required>
                                 <option value="">Tipo de Teléfono</option>
@@ -162,19 +162,18 @@
                               <option value="0002">Celular</option>
                             </select>
                         </div>
-                    </div>
 
-                        <div class="form-group">
-                        <label for="telefono" class="col-sm-4 control-label">Teléfono</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control input-sm" id="telefono" placeholder="Ingrese su telefono" required>
                         </div>
-                      </div>
+                    </div>
+
+                        
 
 
                       <div class="form-group control-group">
-                        <label for="email" class="col-sm-4 control-label">Email</label>
-                        <div class="col-sm-6 controls">
+                        
+                        <div class="col-sm-12 controls">
                             <div class="input-group">
                                 <span class="input-group-addon">@</span>
                                 <input type="email" class="form-control input-sm" id="email" placeholder="sunombre@sumail.com" required data-validation-email-message="Debe ser una dirección de correo válida">
@@ -184,20 +183,19 @@
                       </div>
 
                       <div class="form-group control-group">
-                        <label for="inputPassword" class="col-sm-4 control-label">Password</label>
+                       
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Password" required name="inputPassword">
+                          <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Ingrese una Contraseña" required name="inputPassword">
+                          <p class="help-block"></p>
+                        </div>
+
+                        <div class="col-sm-6 controls">
+                          <input type="password" class="form-control input-sm" id="inputPassword-confirma" placeholder="Confirme su Contraseña" name="inputPassword-confirma" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
                           <p class="help-block"></p>
                         </div>
                       </div>
 
-                      <div class="form-group control-group">
-                        <label for="inputPassword-confirma" class="col-sm-4 control-label">Confirma Password</label>
-                        <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" id="inputPassword-confirma" placeholder="Confirma Password" name="inputPassword-confirma" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
-                          <p class="help-block"></p>
-                        </div>
-                      </div>
+                      
                     
 
                       <div class="form-group">
