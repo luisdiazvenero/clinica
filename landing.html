@@ -11,12 +11,16 @@
 
     <title>Cínica Internacional - Landing de Campaña</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-datepicker3.css" rel="stylesheet">
+    
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="css/formValidation.min.css">
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
+
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -98,7 +102,7 @@
                     <div class="form-group">
                         
                         <div class="col-sm-6">
-                            <select class="form-control input-sm" id="tipodocumento" required>
+                            <select class="form-control input-sm" name="tipodocumento" id="tipodocumento" required>
                                 <option value="">Tipo de Documento</option>
                               <option value="0001">DNI</option>
                               <option value="0002">Carnet de Extranjería</option>
@@ -108,7 +112,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <input type="text" class="form-control input-sm" id="ndocumento" placeholder="Ingrese Nº Documento" required>
+                            <input type="text" class="form-control input-sm" name="ndocumento" id="ndocumento" placeholder="Ingrese Nº Documento" required>
                         </div>
                     </div>
 
@@ -117,7 +121,7 @@
                       <div class="form-group">
                         
                         <div class="col-sm-12">
-                            <input type="text" class="form-control input-sm" id="nombre" placeholder="Ingrese su nombre" required>
+                            <input type="text" class="form-control input-sm" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
                         </div>
 
 
@@ -126,21 +130,21 @@
                       <div class="form-group">
                         
                         <div class="col-sm-12">
-                            <input type="text" class="form-control input-sm" id="paterno" placeholder="Ingrese su apellido paterno" required>
+                            <input type="text" class="form-control input-sm" name="paterno" id="paterno" placeholder="Ingrese su apellido paterno" required>
                         </div>
                       </div>
 
                       <div class="form-group">
                         
                         <div class="col-sm-12">
-                            <input type="text" class="form-control input-sm" id="materno" placeholder="Ingrese su apellido materno" required>
+                            <input type="text" class="form-control input-sm" name="materno" id="materno" placeholder="Ingrese su apellido materno" required>
                         </div>
                       </div>
 
                         <div class="form-group">
 
                             <div class="col-sm-6">
-                            <select class="form-control input-sm" id="sexo" required>
+                            <select class="form-control input-sm" name="sexo" id="sexo" required>
                                 <option value="">Sexo</option>
                               <option value="0001">Masculino</option>
                               <option value="0002">Femenino</option>
@@ -149,7 +153,7 @@
                            
                             <div class="col-sm-6">
                             <div class="input-group date">
-                              <input type="text" class="form-control input-sm" id="nacimiento" placeholder="Ingrese su fecha de nacimiento"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar" required></i></span>
+                              <input type="text" class="form-control input-sm" name="nacimiento" id="nacimiento" placeholder="Ingrese su fecha de nacimiento"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar" required></i></span>
                             </div>
                             </div>
                         </div>
@@ -159,7 +163,7 @@
                         <div class="form-group">
                         
                         <div class="col-sm-6">
-                            <select class="form-control input-sm" id="tipotelefono" required>
+                            <select class="form-control input-sm" name="tipotelefono" id="tipotelefono" required>
                                 <option value="">Tipo de Teléfono</option>
                               <option value="0001">Fijo</option>
                               <option value="0002">Celular</option>
@@ -167,7 +171,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <input type="text" class="form-control input-sm" id="telefono" placeholder="Ingrese su telefono" required>
+                            <input type="text" class="form-control input-sm" name="telefono" id="telefono" placeholder="Ingrese su telefono" required>
                         </div>
                     </div>
 
@@ -179,7 +183,7 @@
                         <div class="col-sm-12 controls">
                             <div class="input-group">
                                 <span class="input-group-addon">@</span>
-                                <input type="email" class="form-control input-sm" id="email" placeholder="sunombre@sumail.com" required data-validation-email-message="Debe ser una dirección de correo válida">
+                                <input type="email" class="form-control input-sm" name="email" id="email" placeholder="sunombre@sumail.com" required data-validation-email-message="Debe ser una dirección de correo válida">
                             </div>
                             <p class="help-block"></p>
                         </div>
@@ -188,18 +192,17 @@
                       <div class="form-group control-group">
                        
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Ingrese una Contraseña" required name="inputPassword">
+                          <input type="password" class="form-control input-sm" name="inputPassword" id="inputPassword" placeholder="Ingrese una Contraseña" required name="inputPassword">
                           <p class="help-block"></p>
                         </div>
 
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" id="inputPassword-confirma" placeholder="Confirme su Contraseña" name="inputPassword-confirma" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
+                          <input type="password" class="form-control input-sm" name="inputPassword-confirma" id="inputPassword-confirma" placeholder="Confirme su Contraseña" name="inputPassword-confirma" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
                           <p class="help-block"></p>
                         </div>
                       </div>
 
                     <div class="form-group control-group">
-                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
                         <div class="g-recaptcha" data-sitekey="6LdgKCMTAAAAAATN-F8ECdcUPbr81Mg-ahlpxSOV"></div>
                     </div>
 
@@ -382,12 +385,14 @@
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/bootstrap-datepicker.es.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/registro.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+
+    <!-- FormValidation plugin and the class supports validating Bootstrap form -->
+    <script src="js/formValidation.min.js"></script>
+    <script src="js/framework/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/language/es_ES.js"></script>
 
     <!-- Datepicker -->
     <script>
@@ -398,6 +403,34 @@
                 autoclose: true
             });
         });
+    </script>
+
+    <!--Formulario-->
+    <script>
+    $(document).ready(function() {
+        $('#form-leads').formValidation({
+            framework: 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            locale: 'es_ES',
+            fields: {
+                tipodocumento: {
+                    row: '.col-xs-4',
+                    
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        }
+                    }
+                }
+            }
+        });
+    });
     </script>
 
     
