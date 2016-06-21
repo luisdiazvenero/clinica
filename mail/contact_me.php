@@ -76,12 +76,12 @@ $message = "Ha recibido un nuevo mensaje desde landing Leads Clinica Internacion
    "\nTIP_TELEFONO_2: ". $TIP_TELEFONO_2 .
    "\nCOD_POSTAL_2: ". $COD_POSTAL_2 .
    "\nNUM_TELEFONO_2: ". $NUM_TELEFONO_2 .
-   "\nORIGEN: ". $ORIGEN;
-   "\nRUTA_FOTO: ". $RUTA_FOTO;
-   "\nPREGUNTA_FILIACION: ". $PREGUNTA_FILIACION;
-   "\nCOD_PARENTESCO: ". $COD_PARENTESCO;
-   "\nFLAG_FILIACION: ". $FLAG_FILIACION;
-   "\nCOD_TITULAR: ". $COD_TITULAR;
+   "\nORIGEN: ". $ORIGEN .
+   "\nRUTA_FOTO: ". $RUTA_FOTO .
+   "\nPREGUNTA_FILIACION: ". $PREGUNTA_FILIACION .
+   "\nCOD_PARENTESCO: ". $COD_PARENTESCO .
+   "\nFLAG_FILIACION: ". $FLAG_FILIACION .
+   "\nCOD_TITULAR: ". $COD_TITULAR .
    "\nFLAG_FOTO: ". $FLAG_FOTO;
 
 $headers = "From:" . $from;	
