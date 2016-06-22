@@ -219,7 +219,7 @@
                       </div>
 
                     <div class="form-group control-group">
-                        <div class="g-recaptcha" data-sitekey="6LdgKCMTAAAAAATN-F8ECdcUPbr81Mg-ahlpxSOV"></div>
+                        <div id="captchaContainer"></div>
                     </div>
 
                       
@@ -407,6 +407,7 @@
 
     <!-- FormValidation plugin and the class supports validating Bootstrap form -->
     <script src="js/formValidation.min.js"></script>
+    <script src="js/addons/reCaptcha2.min.js"></script>
     <script src="js/framework/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/language/es_ES.js"></script>
 
@@ -435,6 +436,15 @@
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
                 validating: 'glyphicon glyphicon-refresh'
+            },
+            addOns: {
+                reCaptcha2: {
+                    element: 'captchaContainer',
+                    theme: 'light',
+                    siteKey: '6LdgKCMTAAAAAATN-F8ECdcUPbr81Mg-ahlpxSOV',
+                    timeout: 120,
+                    message: 'Captcha no válido'
+                }
             },
             locale: 'es_ES',
             fields: {
@@ -564,7 +574,7 @@
                         },
                         regexp: {
                             regexp: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).[^\W_]+$/,
-                            message: 'La contraseña debe contener al menos 01 mayúscula, 01 minúscula y 01 número.'
+                            message: 'La contraseña debe contener al menos 01 mayúscula, 01 minúscula y 01 número. No se aceptan espacios ni caracteres especiales'
                         }
                     }
                     
