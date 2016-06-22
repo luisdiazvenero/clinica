@@ -116,7 +116,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <input type="text" class="form-control input-sm" name="ndocumento" id="ndocumento" placeholder="Ingrese Nº Documento">
+                            <input type="text" class="form-control input-sm" name="ndocumento" id="ndocumento" placeholder="Nº Documento">
                         </div>
                     </div>
                     </div>
@@ -126,7 +126,7 @@
                       <div class="form-group">
                         
                         
-                            <input type="text" class="form-control input-sm" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                            <input type="text" class="form-control input-sm" name="nombre" id="nombre" placeholder="Nombres">
                         
 
 
@@ -135,12 +135,12 @@
                       <div class="form-group">
                         
                         
-                            <input type="text" class="form-control input-sm" name="paterno" id="paterno" placeholder="Ingrese su apellido paterno">
+                            <input type="text" class="form-control input-sm" name="paterno" id="paterno" placeholder="Apellido Paterno">
                         
                       </div>
 
                       <div class="form-group">
-                            <input type="text" class="form-control input-sm" name="materno" id="materno" placeholder="Ingrese su apellido materno">    
+                            <input type="text" class="form-control input-sm" name="materno" id="materno" placeholder="Apellido Materno">    
                       </div>
 
                         <div class="form-group">
@@ -165,7 +165,7 @@
                                 <div class="col-sm-6 date">
                                     <div class="input-group input-append date" id="datePicker">
                                         <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-                                        <input type="text" class="form-control input-sm" name="nacimiento" id="nacimiento" placeholder="Ingrese su fecha de nacimiento" /> 
+                                        <input type="text" class="form-control input-sm" name="nacimiento" id="nacimiento" placeholder="Fecha de Nac." /> 
                                     </div>
                                 </div>
 
@@ -185,7 +185,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <input type="text" class="form-control input-sm" name="telefono" id="telefono" placeholder="Ingrese su telefono">
+                            <input type="text" class="form-control input-sm" name="telefono" id="telefono" placeholder="Número de Teléfono">
                         </div>
                         </div>
                     </div>
@@ -198,22 +198,22 @@
                         
                             <div class="input-group">
                                 <span class="input-group-addon">@</span>
-                                <input type="email" class="form-control input-sm" name="email" id="email" placeholder="sunombre@sumail.com" data-validation-email-message="Debe ser una dirección de correo válida">
+                                <input type="email" class="form-control input-sm" name="email" id="email" placeholder="Correo electrónico">
                             </div>
-                            <p class="help-block"></p>
+                            
                         
                       </div>
 
                       <div class="form-group control-group">
                        <div class="row">
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Ingrese una Contraseña" name="inputPassword">
-                          <p class="help-block"></p>
+                          <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Contraseña" name="inputPassword">
+                          
                         </div>
 
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" name="inputPasswordconfirma" id="inputPasswordconfirma" placeholder="Confirme su Contraseña" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
-                          <p class="help-block"></p>
+                          <input type="password" class="form-control input-sm" name="inputPasswordconfirma" id="inputPasswordconfirma" placeholder="Repetir Contraseña">
+                         
                         </div>
                         </div>
                       </div>
@@ -452,6 +452,11 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Número de Documento'
+                        },
+                        stringLength: {
+                            min: 8,
+                            max: 20,
+                            message: 'El documento debe tener minimo 8 de digitos.'
                         }
                     }
                 },
@@ -459,6 +464,9 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Nombres'
+                        },
+                        stringLength: {
+                            max: 50
                         }
                     }
                 },
@@ -466,6 +474,9 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Apellido Paterno'
+                        },
+                        stringLength: {
+                            max: 50
                         }
                     }
                 },
@@ -473,6 +484,9 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Apellido Materno'
+                        },
+                        stringLength: {
+                            max: 50
                         }
                     }
                 },
@@ -490,6 +504,9 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Fecha de Nacimiento DD/MM/AAAA'
+                        },
+                        stringLength: {
+                            max: 20
                         },
                         date: {
                             format: 'DD/MM/YYYY',
@@ -516,6 +533,9 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Número Telefónico'
+                        },
+                        stringLength: {
+                            max: 50
                         }
                     }
                     
@@ -524,6 +544,9 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese Correo Electrónico'
+                        },
+                        stringLength: {
+                            max: 150
                         }
                     }
                     
@@ -533,6 +556,15 @@
                     validators: {
                         notEmpty: {
                             message: 'Ingrese una Contraseña'
+                        },
+                        stringLength: {
+                            min: 8,
+                            max: 100,
+                            message: 'La longitud mínima debe ser de 8 caractéres.'
+                        },
+                        regexp: {
+                            regexp: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).[^\W_]+$/,
+                            message: 'La contraseña debe contener al menos 01 mayúscula, 01 minúscula y 01 número.'
                         }
                     }
                     
@@ -542,11 +574,37 @@
                     validators: {
                         notEmpty: {
                             message: 'Confirme su Contraseña'
+                        },
+                        stringLength: {
+                            max: 100
+                        },
+                        identical: {
+                            field: 'inputPassword',
+                            message: 'Las contraseñas deben ser iguales'
                         }
                     }
                 }
             }
+
+
+        })
+
+        .on('err.validator.fv', function(e, data) {
+            // $(e.target)    --> The field element
+            // data.fv        --> The FormValidation instance
+            // data.field     --> The field name
+            // data.element   --> The field element
+            // data.validator --> The current validator name
+
+            data.element
+                .data('fv.messages')
+                // Hide all the messages
+                .find('.help-block[data-fv-for="' + data.field + '"]').hide()
+                // Show only message associated with current validator
+                .filter('[data-fv-validator="' + data.validator + '"]').show();
         });
+
+
     });
     </script>
 
