@@ -461,7 +461,7 @@ footer .footer-below {
     color: #ff0000;
 }
 
-.help-block {
-    margin-top: 0px;
-    margin-bottom: 0px;
+.g-recaptcha {
+    transform:scale(0.77);
+    transform-origin:0 0;
 }
