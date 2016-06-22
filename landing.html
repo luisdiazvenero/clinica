@@ -418,13 +418,17 @@
             locale: 'es_ES',
             fields: {
                 tipodocumento: {
-                    row: '.col-xs-4',
-                    
-                },
-                password: {
                     validators: {
                         notEmpty: {
-                            message: 'The password is required'
+                            message: 'Seleccione Tipo de Documento'
+                        }
+                    }
+                    
+                },
+                ndocumento: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Ingrese Número de Documento'
                         }
                     }
                 }
