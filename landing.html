@@ -192,12 +192,12 @@
                       <div class="form-group control-group">
                        
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" name="inputPassword" id="inputPassword" placeholder="Ingrese una Contraseña" required name="inputPassword">
+                          <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Ingrese una Contraseña" required name="inputPassword">
                           <p class="help-block"></p>
                         </div>
 
                         <div class="col-sm-6 controls">
-                          <input type="password" class="form-control input-sm" name="inputPassword-confirma" id="inputPassword-confirma" placeholder="Confirme su Contraseña" name="inputPassword-confirma" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
+                          <input type="password" class="form-control input-sm" name="inputPasswordconfirma" id="inputPasswordconfirma" placeholder="Confirme su Contraseña" data-validation-matches-match="inputPassword" data-validation-matches-message="Las contraseñas deben ser iguales">
                           <p class="help-block"></p>
                         </div>
                       </div>
@@ -500,6 +500,13 @@
                         }
                     }
                     
+                },
+                inputPasswordconfirma: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Confirme su Contraseña'
+                        }
+                    }
                 }
             }
         });
