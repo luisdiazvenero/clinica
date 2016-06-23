@@ -464,6 +464,7 @@ footer .footer-below {
 /*Captcha*/
 .rc-anchor-normal,
 #captchaContainer iframe,
-#captchaContainer {
-    width: 100%;
+#captchaContainer,
+#captchaContainer div {
+    width: 100%!important;
 }
