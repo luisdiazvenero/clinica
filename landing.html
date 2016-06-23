@@ -765,11 +765,11 @@
 
     
     $("#agreeButton").click(function () {  
-        $('input:checkbox[name=terminos]').attr('checked',true);       
+        $('input:checkbox[name=terminos]').prop('checked',true);       
     });
 
     $("#disagreeButton").click(function () {  
-        $('input:checkbox[name=terminos]').attr('checked',false);       
+        $('input:checkbox[name=terminos]').prop('checked',false);       
     });
     
     
