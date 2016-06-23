@@ -463,7 +463,7 @@ footer .footer-below {
 
 /*Captcha*/
 .rc-anchor-normal,
-.captchaContainer iframe,
-.captchaContainer {
+#captchaContainer iframe,
+#captchaContainer {
     width: 100%;
 }
