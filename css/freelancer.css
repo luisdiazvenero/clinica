@@ -461,7 +461,9 @@ footer .footer-below {
     color: #ff0000;
 }
 
-.g-recaptcha {
-    transform:scale(0.77);
-    transform-origin:0 0;
+/*Captcha*/
+.rc-anchor-normal,
+.captchaContainer iframe,
+.captchaContainer {
+    width: 100%;
 }
