@@ -462,11 +462,6 @@ footer .footer-below {
 }
 
 /*Captcha*/
-
-#captchaContainer .rc-anchor-normal,
-#captchaContainer iframe,
-#captchaContainer,
-#captchaContainer div,
-.rc-anchor-light {
-    width: 100%!important;
+#captchaContainer {
+    margin: 0 auto;
 }
