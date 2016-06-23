@@ -464,4 +464,5 @@ footer .footer-below {
 /*Captcha*/
 #captchaContainer {
     margin: 0 auto;
+    display: table;
 }
