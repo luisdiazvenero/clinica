@@ -613,9 +613,44 @@
                 .find('.help-block[data-fv-for="' + data.field + '"]').hide()
                 // Show only message associated with current validator
                 .filter('[data-fv-validator="' + data.validator + '"]').show();
-        });
+        })
 
-        
+        .on('success.form.fv', function(e) {
+        // Prevent default form submission
+        e.preventDefault();
+
+        var $form = $(e.target);
+
+        // Send all form data to back-end
+        $.ajax({
+            url: '/path/to/your/send-mail.php',
+            type: 'POST',
+            data: $form.serialize(),
+            dataType: 'json',
+            success: function(response) {
+                // Clear the form
+                $form.formValidation('resetForm', true);
+
+                // Regenerate the captcha
+                generateCaptcha();
+
+                 // Show the message
+                response.result === 'error'
+                    ? $('#alertContainer')
+                        .removeClass('alert-success')
+                        .addClass('alert-warning')
+                        .html('Sorry, cannot send the message')
+                        .show()
+                    : $('#alertContainer')
+                        .removeClass('alert-warning')
+                        .addClass('alert-success')
+                        .html('Your message has been successfully sent')
+                        .show();
+            }
+        });
+    });
+
+
 
 
     });
