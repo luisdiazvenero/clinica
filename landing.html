@@ -460,6 +460,17 @@
         });
     </script>
 
+    <!-- Terminos -->
+    <script>
+        $("#agreeButton").click(function () {  
+        $('input:checkbox[name=terminos]').prop('checked',true);       
+    });
+
+    $("#disagreeButton").click(function () {  
+        $('input:checkbox[name=terminos]').prop('checked',false);       
+    });
+    </script>
+
     <!--Formulario-->
     <script>
     $(document).ready(function() {
@@ -764,13 +775,7 @@
 
 
     
-    $("#agreeButton").click(function () {  
-        $('input:checkbox[name=terminos]').prop('checked',true);       
-    });
-
-    $("#disagreeButton").click(function () {  
-        $('input:checkbox[name=terminos]').prop('checked',false);       
-    });
+    
     
     
 
