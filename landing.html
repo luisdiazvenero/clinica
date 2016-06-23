@@ -697,6 +697,7 @@
             success: function(response) {
                 // Clear the form
                 $('#form-leads').formValidation('resetForm', true);
+                FormValidation.AddOn.reCaptcha2.reset('captchaContainer');
 
                 // Regenerate the captcha
                 // generateCaptcha();
