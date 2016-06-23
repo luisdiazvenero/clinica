@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #0099ff;
+    background: #52BAFF;
 }
 
 header .container {
@@ -354,6 +354,14 @@ footer .footer-below {
     background-color: #006BA6;
 }
 
+.btn {
+    border-radius: 3px;
+}
+
+.btn-default {
+
+}
+
 .btn-social {
     display: inline-block;
     width: 50px;
@@ -466,4 +474,15 @@ footer .footer-below {
 #captchaContainer {
     margin: 0 auto;
     display: table;
+}
+
+
+header .modal-body,
+header .modal-header h3
+ {
+    color: #222;
+}
+
+header .modal-body p {
+    font-size: 12px;
 }

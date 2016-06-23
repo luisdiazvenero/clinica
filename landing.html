@@ -222,12 +222,23 @@
                         <div id="captchaContainer"></div>
                     </div>
 
-                      
+                      <div class="form-group">
+
+                        <label>
+                            <input type="checkbox" name="terminos"/> Aceptar los <a href="#termsModal" data-toggle="modal">Términos y Condiciones</a>
+                            
+                        </label>
+                        
+                            
+                            
+                            
+                        
+                    </div>
                     
 
                       <div class="form-group">
                         
-                          <button type="submit" class="btn btn-default btn-lg btn-block">Registrarme</button>
+                          <button type="submit" class="btn btn-primary btn-lg btn-block">Registrarme</button>
                        
                       </div>
 
@@ -235,6 +246,28 @@
                       
                         
                     </form>
+
+                    <!-- Terms and conditions modal -->
+                    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="Terminoss y Condiciones" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Terminos y Condiciones</h3>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>De conformidad con lo establecido en la Ley N° 29733 - Ley de Protección de Datos Personales y su Reglamento, quien suscribe el presente documento, queda informado y da su consentimiento libre, previo, expreso, inequívoco e informado, para el tratamiento y transferencia, nacional e internacional de sus datos personales al banco de datos de titularidad de CLÍNICA INTERNACIONAL ("La Clínica"), que estará ubicado en sus oficinas a nivel nacional que, conjuntamente con cualquier otro dato que pudiera facilitarse a lo largo de la relación jurídica y aquellos obtenidos en fuentes accesibles al público, se tratarán con las finalidades de brindar el servicio de atención médica al paciente, analizar las circunstancias al celebrar contratos con La Clínica, gestionar la contratación, evaluar la calidad del servicio y para la realización de estudios estadísticos. Asimismo, La Clínica utilizará los datos personales con fines comerciales, y publicitarios a fin de remitir información de los productos y servicios que La Clínica considere de su interés. Los datos proporcionados serán incorporados, con las mismas finalidades, a las bases de datos de CLÍNICA INTERNACIONAL y/u otras empresas subsidiarias, filiales, asociadas, afiliadas o miembros del Grupo Económico al cual pertenece y/o terceros con los que éstas mantengan una relación contractual. Los datos suministrados son esenciales para las finalidades indicadas. Las bases de datos donde ellos se almacenan cuentan con estrictas medidas de seguridad. En caso se decida no proporcionarlos, no será posible la prestación de servicios por parte La Clínica. Conforme a Ley, el titular de la información está facultado a ejercitar los derechos de información, acceso, rectificación, supresión o cancelación y oposición que se detallan en la Ley N° 29733, Ley de Protección de Datos Personales y su Reglamento, mediante comunicación dirigida CLÍNICA INTERNACIONAL.</p>
+                                    
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="agreeButton" data-dismiss="modal">Aceptar</button>
+                                    <button type="button" class="btn btn-default" id="disagreeButton" data-dismiss="modal">Rechazar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Terms and conditions modal -->
                 </div>
                 <!--Formulario-->
             </div>
@@ -594,6 +627,15 @@
                             message: 'Las contraseñas deben ser iguales'
                         }
                     }
+                },
+                
+                terminos: {
+                    icon: false,
+                    validators: {
+                        notEmpty: {
+                            message: 'Debe aceptar los Términos y Condiciones'
+                        }
+                     }
                 }
             }
 
@@ -721,7 +763,21 @@
 
 
 
+    
+    $("#agreeButton").click(function () {  
+        $('input:checkbox[name=terminos]').attr('checked',true);       
     });
+
+    $("#disagreeButton").click(function () {  
+        $('input:checkbox[name=terminos]').attr('checked',false);       
+    });
+    
+    
+
+    });
+
+
+
     </script>
 
     
