@@ -696,7 +696,7 @@
             cache: false,
             success: function(response) {
                 // Clear the form
-                $form.formValidation('resetForm', true);
+                $('#form-leads').formValidation('resetForm', true);
 
                 // Regenerate the captcha
                 // generateCaptcha();
@@ -706,12 +706,12 @@
                     ? $('#exito')
                         .removeClass('alert-success')
                         .addClass('alert-warning')
-                        .html('Sorry, cannot send the message')
+                        .html('No se pudo enviar el mensaje, vuelva a intentar.')
                         .show()
                     : $('#exito')
                         .removeClass('alert-warning')
                         .addClass('alert-success')
-                        .html('Your message has been successfully sent')
+                        .html('Su registro se envió exitosamente.')
                         .show();
             }
         });
