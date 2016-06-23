@@ -621,12 +621,79 @@
 
         var $form = $(e.target);
 
+        // get values from FORM
+            var COD_EMPRESA = "1";
+            var TIP_DOC_IDENTIDAD = $("select#tipodocumento").val();
+            var NUM_DOC_IDENTIDAD = $("input#ndocumento").val();
+            var PASSWORD = $("input#inputPassword").val();
+            var NOMBRES = $("input#nombre").val();
+            var APE_PATERNO = $("input#paterno").val();
+            var APE_MATERNO = $("input#materno").val();
+            var CORREO_1 = $("input#email").val();
+            var COD_PERFIL = "0";
+            var FECHA_NACIMIENTO = $("input#nacimiento").val();
+            var COD_ESTADO_CIVIL = " ";
+            var COD_SEXO = $("select#sexo").val();
+
+            var DIRECCION = " ";
+            var COD_DEPARTAMENTO = " ";
+            var COD_PROVINCIA = " ";
+            var COD_DISTRITO = " ";
+            
+            var TIP_TELEFONO_1 = $("select#tipotelefono").val();
+            var COD_POSTAL_1 = " ";
+            var NUM_TELEFONO_1 = $("input#telefono").val();
+
+            var TIP_TELEFONO_2 = " ";
+            var COD_POSTAL_2 = " ";
+            var NUM_TELEFONO_2 = " ";
+
+            var ORIGEN = "LANDING-BOOM";
+
+            var RUTA_FOTO = " ";
+            var PREGUNTA_FILIACION = " ";
+            var COD_PARENTESCO = " ";
+            var FLAG_FILIACION = " ";
+            var COD_TITULAR = " ";
+            var FLAG_FOTO = "1";
+
         // Send all form data to back-end
         $.ajax({
-            url: '/path/to/your/send-mail.php',
+            url: "mail/contact_me.php",
             type: 'POST',
-            data: $form.serialize(),
-            dataType: 'json',
+            data: {
+                    COD_EMPRESA: COD_EMPRESA,
+                    TIP_DOC_IDENTIDAD: TIP_DOC_IDENTIDAD,
+                    NUM_DOC_IDENTIDAD: NUM_DOC_IDENTIDAD,
+                    PASSWORD: PASSWORD,
+                    NOMBRES: NOMBRES,
+                    APE_PATERNO: APE_PATERNO,
+                    APE_MATERNO: APE_MATERNO,
+                    CORREO_1: CORREO_1,
+                    COD_PERFIL: COD_PERFIL,
+                    FECHA_NACIMIENTO: FECHA_NACIMIENTO,
+                    COD_ESTADO_CIVIL: COD_ESTADO_CIVIL,
+                    COD_SEXO: COD_SEXO,
+                    DIRECCION: DIRECCION,
+                    COD_DEPARTAMENTO: COD_DEPARTAMENTO,
+                    COD_PROVINCIA: COD_PROVINCIA,
+                    COD_DISTRITO: COD_DISTRITO,
+                    TIP_TELEFONO_1: TIP_TELEFONO_1,
+                    COD_POSTAL_1: COD_POSTAL_1,
+                    NUM_TELEFONO_1: NUM_TELEFONO_1,
+                    TIP_TELEFONO_2: TIP_TELEFONO_2,
+                    COD_POSTAL_2: COD_POSTAL_2,
+                    NUM_TELEFONO_2: NUM_TELEFONO_2,
+                    ORIGEN: ORIGEN,
+                    RUTA_FOTO: RUTA_FOTO,
+                    PREGUNTA_FILIACION: PREGUNTA_FILIACION,
+                    COD_PARENTESCO: COD_PARENTESCO,
+                    FLAG_FILIACION: FLAG_FILIACION,
+                    COD_TITULAR: COD_TITULAR,
+                    FLAG_FOTO: FLAG_FOTO
+                    
+                },
+            cache: false,
             success: function(response) {
                 // Clear the form
                 $form.formValidation('resetForm', true);
@@ -636,12 +703,12 @@
 
                  // Show the message
                 response.result === 'error'
-                    ? $('#alertContainer')
+                    ? $('#exito')
                         .removeClass('alert-success')
                         .addClass('alert-warning')
                         .html('Sorry, cannot send the message')
                         .show()
-                    : $('#alertContainer')
+                    : $('#exito')
                         .removeClass('alert-warning')
                         .addClass('alert-success')
                         .html('Your message has been successfully sent')
