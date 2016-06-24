@@ -25,10 +25,7 @@ $ch = curl_init('http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario'
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-    'Content-Type: application/json', 
-    'CosapiId: 123')                                                                       
-);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/plain','CosapiId: 123'));
 //curl_setopt ($ch,CURLOPT_TIMEOUT, 30);   
 //curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
 //curl_setopt ($ch, CURLOPT_NOSIGNAL, 1);
