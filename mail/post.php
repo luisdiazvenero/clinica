@@ -1,28 +1,27 @@
 <?php
+$url = "http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario";
 
+$data = array(
+  'token' => 'fooToken',
+  'json' => '{"foo":"test"}',
+);
 
+foreach($data as $key=>$value) { $content .= $key.'='.$value.'&'; }
 
-$article = new stdClass();
-$article->title = "An example article";
-$article->summary = "An example of posting JSON encoded data to a web service";
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_HEADER, false);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
 
-$json_data = json_encode($article);
+$json_response = curl_exec($curl);
 
-$post = file_get_contents('http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario',null,stream_context_create(array(
-    'http' => array(
-        'protocol_version' => 1.1,
-        'user_agent'       => 'PHPExample',
-        'method'           => 'POST',
-        'header'           => "Content-type: application/jsonrn".
-                              "Connection: closern" .
-                              "Content-length: " . strlen($json_data) . "rn",
-        'content'          => $json_data,
-    ),
-)));
+$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-if ($post) {
-    echo $post;
-} else {
-    echo "POST failed";
-}
+curl_close($curl);
+
+$response = json_decode($json_response, true);
+var_dump($response);
+
+echo json_encode($_POST);
 ?>
