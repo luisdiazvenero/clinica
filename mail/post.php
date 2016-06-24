@@ -31,6 +31,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Co
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 $result = curl_exec($ch);
+$json = json_decode($result, true);
+print_r($json);
 // curl_close($ch);
 // print $result;
 // var_dump($result);
