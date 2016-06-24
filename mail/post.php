@@ -19,7 +19,7 @@ $data = array("COD_EMPRESA" => 1,
   "FLAG_FOTO" => "1");
 
 $data_string = json_encode($data);
-var_dump($data_string);
+//var_dump($data_string);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario");
@@ -31,7 +31,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Co
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 $result = curl_exec($ch);
-// var_dump($result);
+var_dump($result);
 
 var_dump(http_response_code());
 ?>
