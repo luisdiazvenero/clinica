@@ -6,7 +6,7 @@
 
 
 $data = array("name" => "Hagrid", "age" => "36");                                                                    
-$data_string = json_encode($data);                                                                                   
+$data_string = json_encode($data). "&";                                                                                   
                                                                                                                      
 $ch = curl_init('http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario');                                                                      
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
@@ -18,5 +18,5 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 );                                                                                                                   
                                                                                                                      
 $result = curl_exec($ch);
-
+print ($results);
 ?>
