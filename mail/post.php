@@ -1,5 +1,5 @@
 <?php
-$url = 'http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario ';
+$url = 'http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario';
 $data = array('Username' => 'user', 'password' => '1234', 'LoginClient' => 'user');
 $opts = array(
     'http' => array(
