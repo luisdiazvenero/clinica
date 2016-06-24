@@ -239,10 +239,9 @@
         // Send all form data to back-end
         $.ajax({
             // PHP url: "mail/contact_me.php",
-            url: "http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario"
+            url: "http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario",
             contentType: "application/json; charset=utf-8",
             type: 'POST',
-            dataType: "json",
             data: {
                     COD_EMPRESA: COD_EMPRESA,
                     TIP_DOC_IDENTIDAD: TIP_DOC_IDENTIDAD,
@@ -278,6 +277,7 @@
             headers: {
                 CosapiId: '123'
             },
+            dataType: 'json',
             cache: false,
             success: function(response) {
                 // Clear the form
