@@ -39,8 +39,8 @@ var_dump(http_response_code());
 
 
 // Parse the response object, e.g. read the headers, body, etc.
-$headers = $response->getHeaders();
-$body = $response->getBody();
+$headers = $result->getHeaders();
+$body = $result->getBody();
 
 // Output headers and body for debugging purposes
 var_dump($headers, $body);
