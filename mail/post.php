@@ -32,7 +32,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/plain','CosapiId:
 //scurl_setopt ($ch, CURLOPT_TIMEOUT_MS, 200);
 curl_setopt ($ch, CURLOPT_AUTOREFERER, true);
 curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 2);                                                                                                                   
+curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 2);
+
                                                                                                                      
 $result = curl_exec($ch);
 
