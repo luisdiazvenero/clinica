@@ -12,5 +12,5 @@ curl_error($ch);
 else {
 echo "";
 print_r($result);
-exit;
+exit;}
 ?>
