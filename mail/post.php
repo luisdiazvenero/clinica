@@ -32,5 +32,6 @@ var_dump($result);
 
 var_dump(http_response_code());
 
-echo json_encode($result);
+// decode the response into an array
+$decoded = json_decode( $result, true );
 ?>
