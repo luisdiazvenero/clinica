@@ -30,7 +30,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'CosapiId: 123',                                                                               
     'Content-Length: ' . strlen($data_string))                                                                       
 );
-curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
+curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 55);
 curl_setopt ($ch, CURLOPT_AUTOREFERER, true);
 curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 2);                                                                                                                   
@@ -40,11 +40,7 @@ $result = curl_exec($ch);
 // Will dump a beauty json :3
 $json = $result;
 var_dump(json_decode($json));
-
 var_dump(curl_error($ch));
 
 curl_close($ch);
-
-
-
 ?>
