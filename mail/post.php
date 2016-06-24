@@ -31,4 +31,6 @@ $result = curl_exec($ch);
 var_dump($result);
 
 var_dump(http_response_code());
+
+echo json_encode($result);
 ?>
