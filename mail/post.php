@@ -32,7 +32,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 );
 //curl_setopt ($ch,CURLOPT_TIMEOUT, 30);   
 //curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
-curl_setopt ($ch, CURLOPT_NOSIGNAL, 1);
+// curl_setopt ($ch, CURLOPT_NOSIGNAL, 1);
 curl_setopt ($ch, CURLOPT_TIMEOUT_MS, 200);
 curl_setopt ($ch, CURLOPT_AUTOREFERER, true);
 curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, false);
