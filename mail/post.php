@@ -26,9 +26,14 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-    'Content-Type: application/json',                                                                                
+    'Content-Type: application/json', 
+    'CosapiId: 123',                                                                               
     'Content-Length: ' . strlen($data_string))                                                                       
-);                                                                                                                   
+);
+curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
+curl_setopt ($ch, CURLOPT_AUTOREFERER, true);
+curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 2);                                                                                                                   
                                                                                                                      
 $result = curl_exec($ch);
 
