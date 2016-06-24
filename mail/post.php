@@ -27,8 +27,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
     'Content-Type: application/json', 
-    'CosapiId: 123',                                                                               
-    'Content-Length: ' . strlen($data_string))                                                                       
+    'CosapiId: 123')                                                                       
 );
 //curl_setopt ($ch,CURLOPT_TIMEOUT, 30);   
 //curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
