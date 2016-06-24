@@ -36,5 +36,10 @@ $result = curl_exec($ch);
 $json = $result;
 var_dump(json_decode($json));
 
+var_dump(curl_error($ch));
+
+curl_close($ch);
+
+
 
 ?>
