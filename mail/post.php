@@ -38,7 +38,7 @@ $result = curl_exec($ch);
 // var_dump($result);
 
 var_dump(http_response_code());
-curl_close($ch);
+// curl_close($ch);
 
 // Will dump a beauty json :3
 $json = $result;
