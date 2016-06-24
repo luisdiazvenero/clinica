@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 $data = array("COD_EMPRESA" => 1,
   "TIP_DOC_IDENTIDAD" => "0001",
   "NUM_DOC_IDENTIDAD" => "44020580",
@@ -32,12 +29,5 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 var_dump($result);
 
-
-
-$response = curl_exec($ch);
-print_r($response);
-curl_close($ch);
-
+var_dump(http_response_code());
 ?>
-
-
