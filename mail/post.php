@@ -18,7 +18,7 @@ $data = array("COD_EMPRESA" => 1,
   "COD_TITULAR" => 0,
   "FLAG_FOTO" => "1");
 
-$data_string = json_encode($data);
+$data_string = json_encode($data, true);
 var_dump($data_string);
 
 $ch = curl_init();
@@ -31,8 +31,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Co
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 $result = curl_exec($ch);
-$json = json_decode($result, true);
-print_r($json);
+// $json = json_decode($result, true);
+// print_r($json);
 // curl_close($ch);
 // print $result;
 // var_dump($result);
