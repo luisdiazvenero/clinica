@@ -32,6 +32,9 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 var_dump($result);
 
+$response = curl_exec($req);
+$reponseInfo = curl_getinfo($req);
+$httpResponseCode = $responseInfo['http_code'];
 
 ?>
 
