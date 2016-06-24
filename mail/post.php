@@ -1,15 +1,28 @@
 <?php
-$url = 'http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario';
-$data = array('Username' => 'user', 'password' => '1234', 'LoginClient' => 'user');
-$opts = array(
-    'http' => array(
-        'header'  => "application/jsons",
-        'method'  => 'POST',
-        'content' => http_build_query($data),
-    )
-);
-$context  = stream_context_create($opts); //Creates and returns a stream context with any options supplied in options preset.
-$response = file_get_contents($url, false, $context);
 
-var_dump($response);
+
+
+$article = new stdClass();
+$article->title = "An example article";
+$article->summary = "An example of posting JSON encoded data to a web service";
+
+$json_data = json_encode($article);
+
+$post = file_get_contents('http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario',null,stream_context_create(array(
+    'http' => array(
+        'protocol_version' => 1.1,
+        'user_agent'       => 'PHPExample',
+        'method'           => 'POST',
+        'header'           => "Content-type: application/jsonrn".
+                              "Connection: closern" .
+                              "Content-length: " . strlen($json_data) . "rn",
+        'content'          => $json_data,
+    ),
+)));
+
+if ($post) {
+    echo $post;
+} else {
+    echo "POST failed";
+}
 ?>
