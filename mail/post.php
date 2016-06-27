@@ -6,7 +6,7 @@ curl_setopt_array($curl, array(
   CURLOPT_PORT => "81",
   CURLOPT_URL => "http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario",
   CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_USERAGENT => "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)")
+  CURLOPT_USERAGENT => "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
