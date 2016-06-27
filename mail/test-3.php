@@ -10,7 +10,10 @@ curl_setopt($ch, CURLOPT_URL, 'http://181.65.214.109:81/ServInterno.svc/wsSetReg
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 
 // Set options
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36");
+curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_REFERER, 'http://www.google.com');
+curl_setopt($curl, CURLOPT_AUTOREFERER, true);
 
 // Set headers
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
