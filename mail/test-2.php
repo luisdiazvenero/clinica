@@ -10,5 +10,5 @@
 ?>
 
 Hello there!
-<a href='index.php?hello=true'>Run PHP Function</a>
+<a href='test-2.php?hello=true'>Run PHP Function</a>
 </html>
