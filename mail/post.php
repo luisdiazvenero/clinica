@@ -1,17 +1,10 @@
 <?php
 
-$request = new HttpRequest();
-$request->setUrl('http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario');
-$request->setMethod(HTTP_METH_POST);
+$client = new http\Client;
+$request = new http\Client\Request;
 
-$request->setHeaders(array(
-  'postman-token' => '1a6c5ff3-f8d8-410c-b8be-6e8dec3e5b99',
-  'cache-control' => 'no-cache',
-  'content-type' => 'application/json',
-  'cosapiid' => '123'
-));
-
-$request->setBody('{
+$body = new http\Message\Body;
+$body->append('{
   "COD_EMPRESA": 1,
   "TIP_DOC_IDENTIDAD": "0001",
   "NUM_DOC_IDENTIDAD": "44020580",
@@ -32,10 +25,18 @@ $request->setBody('{
 }
 ');
 
-try {
-  $response = $request->send();
+$request->setRequestUrl('http://181.65.214.109:81/ServInterno.svc/wsSetRegistrarUsuario');
+$request->setRequestMethod('POST');
+$request->setBody($body);
 
-  echo $response->getBody();
-} catch (HttpException $ex) {
-  echo $ex;
-}
+$request->setHeaders(array(
+  
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'cosapiid' => '123'
+));
+
+$client->enqueue($request)->send();
+$response = $client->getResponse();
+
+echo $response->getBody();
